@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="nav">
+    <h1>DoConnect</h1>
+    <span class="menu-spacer"></span>
+    <div style="margin-left: 19%" *ngIf="isHome">
+      <a mat-button *ngFor="let i of links" [routerLink]="'/' + i"> {{ i }} </a>
+      <a mat-button [routerLink]="'/'"> Logout </a>
+    </div>
+    <div style="margin-left: 35%" *ngIf="!isHome">
+      <a mat-button [routerLink]="'/'"> Home </a>
+      <a mat-button [routerLink]="'Register'"> Register</a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
